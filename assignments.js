@@ -18,11 +18,48 @@
 //     console.log(` Jhon's BMI (${jhonsBMI}) is higher than Mark's (${marksBMI})`);
 // }
 
-let numNeighbours = prompt('How many neighbour countries does your country have ? ');
-if (numNeighbours === 1) {
-    console.log(`Only 1 border!`);
-} else if (numNeighbours > 1) {
-    console.log(`More than 1 border`);
+// let numNeighbours = prompt('How many neighbour countries does your country have ? ');
+// if (numNeighbours === 1) {
+//     console.log(`Only 1 border!`);
+// } else if (numNeighbours > 1) {
+//     console.log(`More than 1 border`);
+// } else {
+//     console.log(`No borders`);
+// }
+
+let dolphinsAvarage = (96 + 108 + 89) / 3;
+let koalasAvarage = (88 + 91 + 110) / 3;
+
+if (dolphinsAvarage > koalasAvarage) {
+    console.log(`Koalas scored ${koalasAvarage} ؛ Dolphins scored ${dolphinsAvarage} Dolphins win`);
+} else if (koalasAvarage > dolphinsAvarage) {
+    console.log(`Dolphins scored ${dolphinsAvarage} ؛ Koalas scored ${koalasAvarage} Koalas win`);
 } else {
-    console.log(`No borders`);
+    console.log(`They draw`);
 }
+
+
+// Bouns 01
+let dolphinsAvarage = (97 + 112 + 101) / 3;
+let koalasAvarage = (109 + 95 + 123) / 3;
+
+if (dolphinsAvarage > koalasAvarage && dolphinsAvarage >= 100) {
+    console.log(`Koalas scored ${koalasAvarage} ؛ Dolphins scored ${dolphinsAvarage} Dolphins win`);
+} else if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
+    console.log(`Dolphins scored ${dolphinsAvarage} ؛ Koalas scored ${koalasAvarage} Koalas win`);
+} else {
+    console.log(`They draw`);
+}
+
+// Bouns 02
+let dolphinsAvarage = (97 + 112 + 101) / 3;
+let koalasAvarage = (109 + 95 + 106) / 3;
+
+if (dolphinsAvarage > koalasAvarage && dolphinsAvarage >= 100) {
+    console.log(`Koalas scored ${koalasAvarage} ؛ Dolphins scored ${dolphinsAvarage} Dolphins win`);
+} else if (koalasAvarage > dolphinsAvarage && koalasAvarage >= 100) {
+    console.log(`Dolphins scored ${dolphinsAvarage} ؛ Koalas scored ${koalasAvarage} Koalas win`);
+} else if (dolphinsAvarage === koalasAvarage && dolphinsAvarage >= 100) {
+    console.log(`They draw`);
+}
+
