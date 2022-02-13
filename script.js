@@ -32,13 +32,37 @@
 //     default:
 //         console.log("Great language too :D");
 // }
-function describeCountry(country, population, capitalCity) {
-    return `${country} has ${population} people and its capital city is ${capitalCity}`;
+
+
+
+// function describeCountry(country, population, capitalCity) {
+//     return `${country} has ${population} people and its capital city is ${capitalCity}`;
+// }
+
+// let egypt = describeCountry('egypt', 120000000, 'cairo');
+// let lybia = describeCountry('lybia', 6000000, 'triplo');
+// let sudan = describeCountry('sudan', 20000000, 'alkartom')
+// console.log(egypt);
+// console.log(lybia);
+// console.log(sudan);
+
+function percentageOfWorld1(population) {
+    return population / 7900 * 100;
 }
 
-let egypt = describeCountry('egypt', 120000000, 'cairo');
-let lybia = describeCountry('lybia', 6000000, 'triplo');
-let sudan = describeCountry('sudan', 20000000, 'alkartom')
-console.log(egypt);
-console.log(lybia);
-console.log(sudan);
+let egypt = percentageOfWorld1(120);
+let usa = percentageOfWorld1(360);
+let canada = percentageOfWorld1(30);
+
+console.log(egypt, usa, canada);
+
+let percentageOfWorld2 = function (population) {
+    return population / 7900 * 100;
+}
+
+let syria = percentageOfWorld2(33);
+let iraq = percentageOfWorld2(36);
+let sudan = percentageOfWorld2(30);
+
+console.log(syria, iraq, sudan);
+
