@@ -46,23 +46,30 @@
 // console.log(lybia);
 // console.log(sudan);
 
-function percentageOfWorld1(population) {
-    return population / 7900 * 100;
-}
+// function percentageOfWorld1(population) {
+//     return population / 7900 * 100;
+// }
 
-let egypt = percentageOfWorld1(120);
-let usa = percentageOfWorld1(360);
-let canada = percentageOfWorld1(30);
+// let egypt = percentageOfWorld1(120);
+// let usa = percentageOfWorld1(360);
+// let canada = percentageOfWorld1(30);
 
-console.log(egypt, usa, canada);
+// console.log(egypt, usa, canada);
 
-let percentageOfWorld2 = function (population) {
-    return population / 7900 * 100;
-}
+// let percentageOfWorld2 = function (population) {
+//     return population / 7900 * 100;
+// }
 
-let syria = percentageOfWorld2(33);
-let iraq = percentageOfWorld2(36);
-let sudan = percentageOfWorld2(30);
+// let syria = percentageOfWorld2(33);
+// let iraq = percentageOfWorld2(36);
+// let sudan = percentageOfWorld2(30);
+
+// console.log(syria, iraq, sudan);
+
+let percentageOfWorld3 = (population) => population / 7900 * 100;
+
+let syria = percentageOfWorld3(33);
+let iraq = percentageOfWorld3(36);
+let sudan = percentageOfWorld3(30);
 
 console.log(syria, iraq, sudan);
-
