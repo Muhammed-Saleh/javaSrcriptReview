@@ -80,11 +80,61 @@
 // Hints:
 // § To calculate 20% of a value, simply multiply it by 20/100 = 0.2
 // § Value X is between 50 and 300, if it's >= 50 && <= 300 �
-// GOOD LUCK 
+// GOOD LUCK
 
-let bill = 430;
-let precent = 300 >= bill && bill >= 50 ? 100 / 15 : 100 / 20;
-let tip = bill / precent;
-let totalValue = bill + tip;
+// let bill = 430;
+// let precent = 300 >= bill && bill >= 50 ? 100 / 15 : 100 / 20;
+// let tip = bill / precent;
+// let totalValue = bill + tip;
 
-console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${totalValue}`);
+// console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${totalValue}`);
+
+
+// Coding Challenge #5
+// Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new
+// gymnastics discipline, which works differently.
+// Each team competes 3 times, and then the average of the 3 scores is calculated (so
+// one average score per team).
+// A team only wins if it has at least double the average score of the other team.
+// Otherwise, no team wins!
+// Your tasks:
+// 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+// 2. Use the function to calculate the average for both teams
+// 3. Create a function 'checkWinner' that takes the average score of each team
+// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner
+// to the console, together with the victory points, according to the rule above.
+// Example: "Koalas win (30 vs. 13)"
+// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and
+// Data 2
+// 5. Ignore draws this time
+// Test data:
+// § Data 1: Dolphins score 44, 23 and 71. Koalas score 65, 54 and 49
+// § Data 2: Dolphins score 85, 54 and 41. Koalas score 23, 34 and 27
+// Hints:
+// § To calculate average of 3 values, add them all together and divide by 3
+// § To check if number A is at least double number B, check for A >= 2 * B.
+// Apply this to the team's average scores �
+// GOOD LUCK
+
+let calcAverage = (firstScore, secondScore, thirdScore) => (firstScore + secondScore + thirdScore) / 3;
+
+let avgDolhins01 = calcAverage(44, 23, 71);
+let avgKoalas01 = calcAverage(65, 54, 49);
+
+let avgDolhins02 = calcAverage(85, 54, 41);
+let avgKoalas02 = calcAverage(23, 34, 27);
+
+function checkWinner(avgDolhins, avgKoalas) {
+    if (avgDolhins >= 2 * avgKoalas) {
+        console.log(`Dolphins win (${avgDolhins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolhins) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolhins})`);
+    } else {
+        console.log(`no team wins!`);
+    }
+}
+
+checkWinner(avgDolhins01, avgKoalas01);
+checkWinner(avgDolhins02, avgKoalas02);
+
+
