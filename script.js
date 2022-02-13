@@ -46,9 +46,9 @@
 // console.log(lybia);
 // console.log(sudan);
 
-// function percentageOfWorld1(population) {
-//     return population / 7900 * 100;
-// }
+function percentageOfWorld1(population) {
+    return population / 7900 * 100;
+}
 
 // let egypt = percentageOfWorld1(120);
 // let usa = percentageOfWorld1(360);
@@ -66,10 +66,21 @@
 
 // console.log(syria, iraq, sudan);
 
-let percentageOfWorld3 = (population) => population / 7900 * 100;
+// let percentageOfWorld3 = (population) => population / 7900 * 100;
 
-let syria = percentageOfWorld3(33);
-let iraq = percentageOfWorld3(36);
-let sudan = percentageOfWorld3(30);
+// let syria = percentageOfWorld3(33);
+// let iraq = percentageOfWorld3(36);
+// let sudan = percentageOfWorld3(30);
 
-console.log(syria, iraq, sudan);
+// console.log(syria, iraq, sudan);
+
+let describePopulation = (country, population) => {
+    let populationPrecent = percentageOfWorld1(population);
+    return `${country} has ${population} million people, which is about ${populationPrecent}% of the world.`;
+}
+
+let egypt = describePopulation("egypt", 120);
+let usa = describePopulation("usa", 360);
+let canada = describePopulation("canada", 30);
+
+console.log(egypt, usa, canada);
