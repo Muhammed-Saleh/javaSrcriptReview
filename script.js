@@ -74,13 +74,27 @@ function percentageOfWorld1(population) {
 
 // console.log(syria, iraq, sudan);
 
-let describePopulation = (country, population) => {
-    let populationPrecent = percentageOfWorld1(population);
-    return `${country} has ${population} million people, which is about ${populationPrecent}% of the world.`;
-}
+// let describePopulation = (country, population) => {
+//     let populationPrecent = percentageOfWorld1(population);
+//     return `${country} has ${population} million people, which is about ${populationPrecent}% of the world.`;
+// }
 
-let egypt = describePopulation("egypt", 120);
-let usa = describePopulation("usa", 360);
-let canada = describePopulation("canada", 30);
+// let egypt = describePopulation("egypt", 120);
+// let usa = describePopulation("usa", 360);
+// let canada = describePopulation("canada", 30);
 
-console.log(egypt, usa, canada);
+// console.log(egypt, usa, canada);
+
+let populations = [120, 33, 144, 44];
+
+let percentages = [
+    percentageOfWorld1(populations[0]),
+    percentageOfWorld1(populations[1]),
+    percentageOfWorld1(populations[2]),
+    percentageOfWorld1(populations[3])
+];
+console.log(`${4 > populations.length - 1}`);
+console.log(percentages[0]);
+console.log(percentages[1]);
+console.log(percentages[2]);
+console.log(percentages[3]);
