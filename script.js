@@ -46,9 +46,9 @@
 // console.log(lybia);
 // console.log(sudan);
 
-function percentageOfWorld1(population) {
-    return population / 7900 * 100;
-}
+// function percentageOfWorld1(population) {
+//     return population / 7900 * 100;
+// }
 
 // let egypt = percentageOfWorld1(120);
 // let usa = percentageOfWorld1(360);
@@ -85,16 +85,30 @@ function percentageOfWorld1(population) {
 
 // console.log(egypt, usa, canada);
 
-let populations = [120, 33, 144, 44];
+// let populations = [120, 33, 144, 44];
 
-let percentages = [
-    percentageOfWorld1(populations[0]),
-    percentageOfWorld1(populations[1]),
-    percentageOfWorld1(populations[2]),
-    percentageOfWorld1(populations[3])
-];
-console.log(`${4 > populations.length - 1}`);
-console.log(percentages[0]);
-console.log(percentages[1]);
-console.log(percentages[2]);
-console.log(percentages[3]);
+// let percentages = [
+//     percentageOfWorld1(populations[0]),
+//     percentageOfWorld1(populations[1]),
+//     percentageOfWorld1(populations[2]),
+//     percentageOfWorld1(populations[3])
+// ];
+// console.log(`${4 > populations.length - 1}`);
+// console.log(percentages[0]);
+// console.log(percentages[1]);
+// console.log(percentages[2]);
+// console.log(percentages[3]);
+
+let neighbours = ["Sudan", "Libya", "Palestine"];
+neighbours.push("Utopia");
+console.log(neighbours);
+neighbours.pop();
+console.log(neighbours);
+
+if (!neighbours.includes("Germany")) {
+    console.log(`Probably not a central European country :D`);
+}
+
+let chosen = neighbours.indexOf("Libya");
+neighbours[chosen] = "Syria";
+console.log(neighbours);
