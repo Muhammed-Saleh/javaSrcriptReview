@@ -99,16 +99,24 @@
 // console.log(percentages[2]);
 // console.log(percentages[3]);
 
-let neighbours = ["Sudan", "Libya", "Palestine"];
-neighbours.push("Utopia");
-console.log(neighbours);
-neighbours.pop();
-console.log(neighbours);
+// let neighbours = ["Sudan", "Libya", "Palestine"];
+// neighbours.push("Utopia");
+// console.log(neighbours);
+// neighbours.pop();
+// console.log(neighbours);
 
-if (!neighbours.includes("Germany")) {
-    console.log(`Probably not a central European country :D`);
+// if (!neighbours.includes("Germany")) {
+//     console.log(`Probably not a central European country :D`);
+// }
+
+// let chosen = neighbours.indexOf("Libya");
+// neighbours[chosen] = "Syria";
+// console.log(neighbours);
+
+let myCountry = {
+    country: "Egypt",
+    capital: "Cairo",
+    language: "Arabic",
+    population: 120,
+    neighbours: ["Palestine", "Sudan", "Libya"]
 }
-
-let chosen = neighbours.indexOf("Libya");
-neighbours[chosen] = "Syria";
-console.log(neighbours);
