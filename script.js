@@ -118,13 +118,17 @@ let myCountry = {
     capital: "Cairo",
     language: "Arabic",
     population: 120,
-    neighbours: ["Palestine", "Sudan", "Libya"]
+    neighbours: ["Palestine", "Sudan", "Libya"],
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length > 0 ? false : true;
+    },
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million arabic-speaking people, 
+        ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+    },
+
 }
 
-console.log(`${myCountry.country} has ${myCountry.population} million arabic-speaking people, 
-${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.'`)
-
-myCountry.population += 2;
-console.log(myCountry.population);
-myCountry["population"] -= 2;
-console.log(myCountry["population"]);
+myCountry.describe();
+myCountry.checkIsland();
+console.log(myCountry.isIsland);
