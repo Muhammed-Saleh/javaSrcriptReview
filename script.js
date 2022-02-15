@@ -120,3 +120,11 @@ let myCountry = {
     population: 120,
     neighbours: ["Palestine", "Sudan", "Libya"]
 }
+
+console.log(`${myCountry.country} has ${myCountry.population} million arabic-speaking people, 
+${myCountry.neighbours.length} neighbouring countries and a capital called ${myCountry.capital}.'`)
+
+myCountry.population += 2;
+console.log(myCountry.population);
+myCountry["population"] -= 2;
+console.log(myCountry["population"]);
