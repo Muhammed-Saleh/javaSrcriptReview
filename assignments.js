@@ -161,17 +161,18 @@
 // actually be the returned value of a function! So you can just call a function as array
 // values (so don't store the tip values in separate variables first, but right in the new
 // array) �
-// GOOD LUCK 
+// GOOD LUCK
 
 
-function calcTip(bill) {
-    let precent = 300 >= bill && bill >= 50 ? 15 / 100 : 20 / 100;
-    return (bill * precent);
-}
+// function calcTip(bill) {
+//     let precent = 300 >= bill && bill >= 50 ? 15 / 100 : 20 / 100;
+//     return (bill * precent);
+// }
 
-let bills = [calcTip(125), calcTip(555), calcTip(44)];
-console.log(bills);
+// let bills = [calcTip(125), calcTip(555), calcTip(44)];
+// console.log(bills);
 
-let total = [calcTip(125) + 125, calcTip(555) + 555, calcTip(44) + 44];
-console.log(total);
+// let total = [calcTip(125) + 125, calcTip(555) + 555, calcTip(44) + 44];
+// console.log(total);
+
 
