@@ -113,22 +113,71 @@
 // neighbours[chosen] = "Syria";
 // console.log(neighbours);
 
-let myCountry = {
-    country: "Egypt",
-    capital: "Cairo",
-    language: "Arabic",
-    population: 120,
-    neighbours: ["Palestine", "Sudan", "Libya"],
-    checkIsland: function () {
-        this.isIsland = this.neighbours.length > 0 ? false : true;
-    },
-    describe: function () {
-        console.log(`${this.country} has ${this.population} million arabic-speaking people, 
-        ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
-    },
+// let myCountry = {
+//     country: "Egypt",
+//     capital: "Cairo",
+//     language: "Arabic",
+//     population: 120,
+//     neighbours: ["Palestine", "Sudan", "Libya"],
+//     checkIsland: function () {
+//         this.isIsland = this.neighbours.length > 0 ? false : true;
+//     },
+//     describe: function () {
+//         console.log(`${this.country} has ${this.population} million arabic-speaking people,
+//         ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}.`);
+//     },
 
+// }
+
+// myCountry.describe();
+// myCountry.checkIsland();
+// console.log(myCountry.isIsland);
+
+///////////////////////////////////////////////////////////////
+
+// Coding Challenge #3
+// Let's go back to Mark and John comparing their BMIs! This time, let's use objects to
+// implement the calculations! Remember: BMI = mass / height ** 2 = mass
+// / (height * height) (mass in kg and height in meter)
+// Your tasks:
+// 1. For each of them, create an object with properties for their full name, mass, and
+// height (Mark Miller and John Smith)
+// 2. Create a 'calcBMI' method on each object to calculate the BMI (the same
+// method on both objects). Store the BMI value to a property, and also return it
+// from the method
+// 3. Log to the console who has the higher BMI, together with the full name and the
+// respective BMI. Example: "John's BMI (28.3) is higher than Mark's (23.9)!"
+// Test data: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m
+// tall.
+// GOOD LUCK
+
+// let markMiller = {
+//     fullName: "Mark Miller",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         return this.BMI = this.mass / this.height ** 2;
+//     }
+// }
+
+// let johnSmith = {
+//     fullName: "John Smith",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         return this.BMI = this.mass / this.height ** 2;
+//     }
+// }
+// markMiller.calcBMI();
+// johnSmith.calcBMI();
+
+// console.log(
+//     `${johnSmith.BMI > markMiller ?
+//         `${johnSmith.fullName}'s BMI (${johnSmith.BMI}) is higher than ${markMiller.fullName}'s (${markMiller.BMI})`
+//         : `${markMiller.fullName}'s BMI (${markMiller.BMI}) is higher than ${johnSmith.fullName}'s (${johnSmith.BMI})`}`
+// );
+
+for (let i = 1; i <= 50; i++) {
+    console.log(`Voter number ${i} is currently voting`);
 }
 
-myCountry.describe();
-myCountry.checkIsland();
-console.log(myCountry.isIsland);
