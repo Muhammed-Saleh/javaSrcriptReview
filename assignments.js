@@ -237,14 +237,14 @@
 // § Data 2: [12, 5, -5, 0, 4]
 'use strict';
 
-printForecast([12, 5, -5, 0, 4]);
-function printForecast(arr) {
-  let temperaturesString = ``;
-  for (let i = 0; i < arr.length; i++) {
-    temperaturesString += `... ${arr[i]}ºC in ${i + 1} days `;
-  }
-  console.log(temperaturesString);
-}
+// printForecast([12, 5, -5, 0, 4]);
+// function printForecast(arr) {
+//   let temperaturesString = ``;
+//   for (let i = 0; i < arr.length; i++) {
+//     temperaturesString += `... ${arr[i]}ºC in ${i + 1} days `;
+//   }
+//   console.log(temperaturesString);
+// }
 
 //////////////////////////////////////////////////////////////////////////////////////
 
@@ -276,72 +276,72 @@ function printForecast(arr) {
 // Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
 // Then, call the function again with players from game.scored
 
-// const game = {
-//   team1: 'Bayern Munich',
-//   team2: 'Borrussia Dortmund',
-//   players: [
-//     [
-//       'Neuer',
-//       'Pavard',
-//       'Martinez',
-//       'Alaba',
-//       'Davies',
-//       'Kimmich',
-//       'Goretzka',
-//       'Coman',
-//       'Muller',
-//       'Gnarby',
-//       'Lewandowski',
-//     ],
-//     [
-//       'Burki',
-//       'Schulz',
-//       'Hummels',
-//       'Akanji',
-//       'Hakimi',
-//       'Weigl',
-//       'Witsel',
-//       'Hazard',
-//       'Brandt',
-//       'Sancho',
-//       'Gotze',
-//     ],
-//   ],
-//   score: '4:0',
-//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-//   date: 'Nov 9th, 2037',
-//   odds: {
-//     team1: 1.33,
-//     x: 3.25,
-//     team2: 6.5,
-//   },
-// };
+const game = {
+  team1: 'Bayern Munich',
+  team2: 'Borrussia Dortmund',
+  players: [
+    [
+      'Neuer',
+      'Pavard',
+      'Martinez',
+      'Alaba',
+      'Davies',
+      'Kimmich',
+      'Goretzka',
+      'Coman',
+      'Muller',
+      'Gnarby',
+      'Lewandowski',
+    ],
+    [
+      'Burki',
+      'Schulz',
+      'Hummels',
+      'Akanji',
+      'Hakimi',
+      'Weigl',
+      'Witsel',
+      'Hazard',
+      'Brandt',
+      'Sancho',
+      'Gotze',
+    ],
+  ],
+  score: '4:0',
+  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+  date: 'Nov 9th, 2037',
+  odds: {
+    team1: 1.33,
+    x: 3.25,
+    team2: 6.5,
+  },
+};
 
-// let players1 = [...game.players[0]];
-// let [gk, ...fieldPlayers] = [...players1];
-// let players2 = [...game.players[1]];
+let players1 = [...game.players[0]];
+let [gk, ...fieldPlayers] = [...players1];
+let players2 = [...game.players[1]];
 
-// let allPlayers = [...players1, ...players2];
-// let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+let allPlayers = [...players1, ...players2];
+let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
-// let { team1, team2, x: draw } = game.odds;
+let { team1, team2, x: draw } = game.odds;
 
-// console.log(players1, gk, fieldPlayers, players2, allPlayers);
-// console.log(allPlayers);
-// console.log(players1Final);
-// console.log(team1, draw ,team2);
+console.log(players1, gk, fieldPlayers, players2, allPlayers);
+console.log(allPlayers);
+console.log(players1Final);
+console.log(team1, draw, team2);
 
-// const printGoals = function (...playerNames) {
-//   for (let i = 0; i < playerNames.length; i++) {
-//     console.log(playerNames[i]);
-//   }
+const printGoals = function (...playerNames) {
+  for (let i = 0; i < playerNames.length; i++) {
+    console.log(playerNames[i]);
+  }
 
-//   console.log(`Total scored goals are ${playerNames.length}`);
-// };
-// console.log(team1 || team2);
-// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
-// printGoals('Davies', 'Muller');
-// printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+  console.log(`Total scored goals are ${playerNames.length}`);
+};
+console.log(team1 || team2);
+printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+printGoals('Davies', 'Muller');
+printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
 
 //////////////////////////////////////////////////////////////////////////////
 
