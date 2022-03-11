@@ -11,7 +11,6 @@
 // const marksBMI = marksWeightInKg / marksHeightInM ** 2;
 // const jhonsBMI = jhonsWeightInKg / (jhonsHeightInM * jhonsHeightInM);
 
-
 // if (marksBMI > jhonsBMI) {
 //     console.log(`Mark's BMI (${marksBMI}) is higher than Jhon's (${jhonsBMI})`);
 // } else {
@@ -37,7 +36,6 @@
 // } else {
 //     console.log(`They draw`);
 // }
-
 
 // // Bouns 01
 // let dolphinsAvarage = (97 + 112 + 101) / 3;
@@ -89,7 +87,6 @@
 
 // console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${totalValue}`);
 
-
 // Coding Challenge #5
 // Back to the two gymnastics teams, the Dolphins and the Koalas! There is a new
 // gymnastics discipline, which works differently.
@@ -137,10 +134,7 @@
 // checkWinner(avgDolhins01, avgKoalas01);
 // checkWinner(avgDolhins02, avgKoalas02);
 
-
-
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
 
 // Coding Challenge #2
 // Steven is still building his tip calculator, using the same rules as before: Tip 15% of
@@ -162,7 +156,6 @@
 // values (so don't store the tip values in separate variables first, but right in the new
 // array) �
 // GOOD LUCK
-
 
 // function calcTip(bill) {
 //     let precent = 300 >= bill && bill >= 50 ? 15 / 100 : 20 / 100;
@@ -199,34 +192,229 @@
 // 4.2. To calculate the average, divide the sum you calculated before by the
 // length of the array (because that's the number of elements)
 // 4.3. Call the function with the 'totals' array
-// GOOD LUCK 
+// GOOD LUCK
 
-let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
-let tips = [];
-let totals = [];
+// let bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+// let tips = [];
+// let totals = [];
 
+// function calcTip(bill) {
+//     let precent = 300 >= bill && bill >= 50 ? bill * 0.15 : bill * 0.20;
+//     return precent;
+// }
 
-function calcTip(bill) {
-    let precent = 300 >= bill && bill >= 50 ? bill * 0.15 : bill * 0.20;
-    return precent;
+// for (let i = 0; i < bills.length; i++) {
+//     tips.push(calcTip(bills[i]));
+//     totals.push(calcTip(bills[i]) + bills[i]);
+
+// }
+
+// let calcAverage = function (arr) {
+//     let total = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         total += arr[i];
+//     }
+//     return total / arr.length;
+// }
+
+// console.log(tips);
+// console.log(totals);
+// console.log(calcAverage(totals));
+
+/////////////////////////////////////////////////////////////////////
+
+// Coding Challenge #9
+// Given an array of forecasted maximum temperatures, the thermometer displays a
+// string with the given temperatures. Example: [17, 21, 23] will print "... 17ºC in 1
+// days ... 21ºC in 2 days ... 23ºC in 3 days ..."
+// Your tasks:
+// 1. Create a function 'printForecast' which takes in an array 'arr' and logs a
+// string like the above to the console. Try it with both test datasets.
+// 2. Use the problem-solving framework: Understand the problem and break it up
+// into sub-problems!
+// Test data:
+// § Data 1: [17, 21, 23]
+// § Data 2: [12, 5, -5, 0, 4]
+'use strict';
+
+printForecast([12, 5, -5, 0, 4]);
+function printForecast(arr) {
+  let temperaturesString = ``;
+  for (let i = 0; i < arr.length; i++) {
+    temperaturesString += `... ${arr[i]}ºC in ${i + 1} days `;
+  }
+  console.log(temperaturesString);
 }
 
-for (let i = 0; i < bills.length; i++) {
-    tips.push(calcTip(bills[i]));
-    totals.push(calcTip(bills[i]) + bills[i]);
+//////////////////////////////////////////////////////////////////////////////////////
 
-}
+// Coding Challenge #10
 
-let calcAverage = function (arr) {
-    let total = 0;
-    for (let i = 0; i < arr.length; i++) {
-        total += arr[i];
-    }
-    return total / arr.length;
-}
+// We're building a football betting app (soccer for my American friends �)!
+// Suppose we get data from a web service about a certain game ('game' variable on
+// next page). In this challenge we're gonna work with that data.
+// Your tasks:
+// 1. Create one player array for each team (variables 'players1' and
+// 'players2')
+// 2. The first player in any player array is the goalkeeper and the others are field
+// players. For Bayern Munich (team 1) create one variable ('gk') with the
+// goalkeeper's name, and one array ('fieldPlayers') with all the remaining 10
+// field players
+// 3. Create an array 'allPlayers' containing all players of both teams (22
+// players)
+// 4. During the game, Bayern Munich (team 1) used 3 substitute players. So create a
+// new array ('players1Final') containing all the original team1 players plus
+// 'Thiago', 'Coutinho' and 'Perisic'
+// 5. Based on the game.odds object, create one variable for each odd (called
+// 'team1', 'draw' and 'team2')
+// 6. Write a function ('printGoals') that receives an arbitrary number of player
+// names (not an array) and prints each of them to the console, along with the
+// number of goals that were scored in total (number of player names passed in)
+// 7. The team with the lower odd is more likely to win. Print to the console which
+// team is more likely to win, without using an if/else statement or the ternary
+// operator.
+// Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
+// Then, call the function again with players from game.scored
 
-console.log(tips);
-console.log(totals);
-console.log(calcAverage(totals));
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
+// let players1 = [...game.players[0]];
+// let [gk, ...fieldPlayers] = [...players1];
+// let players2 = [...game.players[1]];
 
+// let allPlayers = [...players1, ...players2];
+// let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+// let { team1, team2, x: draw } = game.odds;
+
+// console.log(players1, gk, fieldPlayers, players2, allPlayers);
+// console.log(allPlayers);
+// console.log(players1Final);
+// console.log(team1, draw ,team2);
+
+// const printGoals = function (...playerNames) {
+//   for (let i = 0; i < playerNames.length; i++) {
+//     console.log(playerNames[i]);
+//   }
+
+//   console.log(`Total scored goals are ${playerNames.length}`);
+// };
+// console.log(team1 || team2);
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals('Davies', 'Muller');
+// printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+
+//////////////////////////////////////////////////////////////////////////////
+
+// Coding Challenge #11
+
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
+
+// // // 1.
+// for (const [i, player] of game.scored.entries())
+//   console.log(`Goal ${i + 1}: ${player}`);
+// // // 2.
+// const values = Object.values(game.odds);
+// let average = 0;
+// for (const value of values) {
+//   average += value;
+// }
+// console.log(average / values.length);
+// // // 3.
+// const oddsKeys = Object.keys(game.odds);
+// const oddsValues = Object.values(game.odds);
+// const oddsKeysEntries = oddsKeys.entries();
+
+// for (const [i, key] of oddsKeysEntries) {
+//   key === 'x'
+//     ? console.log(`Odd of draw:${oddsValues[i]}`)
+//     : console.log(`Odd of victory ${game[key]}:${oddsValues[i]}`);
+// }
+
+// // // 4.
+
+// const scoredEntries = game.scored.entries();
+// let scored = {};
+// for (const [i, player] of scoredEntries) {
+//   scored.hasOwnProperty(player) ? (scored[player] += 1) : (scored[player] = 1);
+// }
+
+// console.log(scored);
