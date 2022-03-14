@@ -276,76 +276,99 @@
 // Test data for 6.: First, use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'.
 // Then, call the function again with players from game.scored
 
-const game = {
-  team1: 'Bayern Munich',
-  team2: 'Borrussia Dortmund',
-  players: [
-    [
-      'Neuer',
-      'Pavard',
-      'Martinez',
-      'Alaba',
-      'Davies',
-      'Kimmich',
-      'Goretzka',
-      'Coman',
-      'Muller',
-      'Gnarby',
-      'Lewandowski',
-    ],
-    [
-      'Burki',
-      'Schulz',
-      'Hummels',
-      'Akanji',
-      'Hakimi',
-      'Weigl',
-      'Witsel',
-      'Hazard',
-      'Brandt',
-      'Sancho',
-      'Gotze',
-    ],
-  ],
-  score: '4:0',
-  scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
-  date: 'Nov 9th, 2037',
-  odds: {
-    team1: 1.33,
-    x: 3.25,
-    team2: 6.5,
-  },
-};
+// const game = {
+//   team1: 'Bayern Munich',
+//   team2: 'Borrussia Dortmund',
+//   players: [
+//     [
+//       'Neuer',
+//       'Pavard',
+//       'Martinez',
+//       'Alaba',
+//       'Davies',
+//       'Kimmich',
+//       'Goretzka',
+//       'Coman',
+//       'Muller',
+//       'Gnarby',
+//       'Lewandowski',
+//     ],
+//     [
+//       'Burki',
+//       'Schulz',
+//       'Hummels',
+//       'Akanji',
+//       'Hakimi',
+//       'Weigl',
+//       'Witsel',
+//       'Hazard',
+//       'Brandt',
+//       'Sancho',
+//       'Gotze',
+//     ],
+//   ],
+//   score: '4:0',
+//   scored: ['Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels'],
+//   date: 'Nov 9th, 2037',
+//   odds: {
+//     team1: 1.33,
+//     x: 3.25,
+//     team2: 6.5,
+//   },
+// };
 
-let players1 = [...game.players[0]];
-let [gk, ...fieldPlayers] = [...players1];
-let players2 = [...game.players[1]];
+// let players1 = [...game.players[0]];
+// let [gk, ...fieldPlayers] = [...players1];
+// let players2 = [...game.players[1]];
 
-let allPlayers = [...players1, ...players2];
-let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+// let allPlayers = [...players1, ...players2];
+// let players1Final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
 
-let { team1, team2, x: draw } = game.odds;
+// let { team1, team2, x: draw } = game.odds;
 
-console.log(players1, gk, fieldPlayers, players2, allPlayers);
-console.log(allPlayers);
-console.log(players1Final);
-console.log(team1, draw, team2);
+// console.log(players1, gk, fieldPlayers, players2, allPlayers);
+// console.log(allPlayers);
+// console.log(players1Final);
+// console.log(team1, draw ,team2);
 
-const printGoals = function (...playerNames) {
-  for (let i = 0; i < playerNames.length; i++) {
-    console.log(playerNames[i]);
-  }
+// const printGoals = function (...playerNames) {
+//   for (let i = 0; i < playerNames.length; i++) {
+//     console.log(playerNames[i]);
+//   }
 
-  console.log(`Total scored goals are ${playerNames.length}`);
-};
-console.log(team1 || team2);
-printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
-printGoals('Davies', 'Muller');
-printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
+//   console.log(`Total scored goals are ${playerNames.length}`);
+// };
+// console.log(team1 || team2);
+// printGoals('Davies', 'Muller', 'Lewandowski', 'Kimmich');
+// printGoals('Davies', 'Muller');
+// printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
 
 //////////////////////////////////////////////////////////////////////////////
 
 // Coding Challenge #11
+
+// Let's continue with our football betting app! Keep using the 'game' variable from
+// before.
+// Your tasks:
+// 1. Loop over the game.scored array and print each player name to the console,
+// along with the goal number (Example: "Goal 1: Lewandowski")
+// 2. Use a loop to calculate the average odd and log it to the console (We already
+// studied how to calculate averages, you can go check if you don't remember)
+// 3. Print the 3 odds to the console, but in a nice formatted way, exactly like this:
+// Odd of victory Bayern Munich: 1.33
+// Odd of draw: 3.25
+// Odd of victory Borrussia Dortmund: 6.5
+// Get the team names directly from the game object, don't hardcode them
+// (except for "draw"). Hint: Note how the odds and the game objects have the
+// same property names �
+// 4. Bonus: Create an object called 'scorers' which contains the names of the
+// players who scored as properties, and the number of goals as the value. In this
+// game, it will look like this:
+// {
+//  Gnarby: 1,
+//  Hummels: 1,
+//  Lewandowski: 2
+// }
 
 // const game = {
 //   team1: 'Bayern Munich',
@@ -388,7 +411,7 @@ printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
 //   },
 // };
 
-// // // 1.
+// // 1.
 // for (const [i, player] of game.scored.entries())
 //   console.log(`Goal ${i + 1}: ${player}`);
 // // // 2.
@@ -418,3 +441,57 @@ printGoals('Lewandowski', 'Gnarby', 'Lewandowski', 'Hummels');
 // }
 
 // console.log(scored);
+
+/////////////////////////////////////////////////////////////////////
+
+// Coding Challenge #12
+// Let's continue with our football betting app! This time, we have a map called
+// 'gameEvents' (see below) with a log of the events that happened during the
+// game. The values are the events themselves, and the keys are the minutes in which
+// each event happened (a football game has 90 minutes plus some extra time).
+// Your tasks:
+// 1. Create an array 'events' of the different game events that happened (no
+// duplicates)
+// 2. After the game has finished, is was found that the yellow card from minute 64
+// was unfair. So remove this event from the game events log.
+// 3. Compute and log the following string to the console: "An event happened, on
+// average, every 9 minutes" (keep in mind that a game has 90 minutes)
+// 4. Loop over 'gameEvents' and log each element to the console, marking
+// whether it's in the first half or second half (after 45 min) of the game, like this:
+// [FIRST HALF] 17: ⚽ GOAL
+// GOOD LUCK �
+
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, '� Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '� Substitution'],
+  [64, '� Yellow card'],
+  [69, '� Red card'],
+  [70, '� Substitution'],
+  [72, '� Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '� Yellow card'],
+]);
+
+//01
+const events = [...new Set(gameEvents.values())];
+console.log(events);
+
+//02
+gameEvents.delete(64);
+console.log(gameEvents);
+
+//03
+console.log(
+  `An event happened, on average, every ${90 / gameEvents.size} minutes`
+);
+//04
+for (const [key, value] of gameEvents) {
+  if (key < 45) {
+    console.log(`[FIRST HALF]  ${key}: ${value}`);
+  } else {
+    console.log(`[SECOND HALF]  ${key}: ${value}`);
+  }
+}
